@@ -172,15 +172,32 @@ function lerArray() {
             numMaior = numero;
         }
     }
-    console.log(numMaior)
+    alert(numMaior)
 }
 
 function inverterPalavra() {
-    let palavra = document.querySelector("#palavraInvertida").value;
+    let palavra = document.querySelector("#palavraInvertida").value.split('');
 
-    //split()
-     //array.reverse()
-    
+    let palavraInvertida = palavra.reverse();
 
-    
+    alert(palavraInvertida.join(''))
+}
+
+function somarArray(){
+    const myArray = [1, 2, 3, 4, 5];
+    let sumArray = 0;
+    for (numero of myArray) {
+        sumArray = sumArray + numero;
+    }
+    alert(sumArray)
+}
+
+function verificarPrimo() {
+    let numero = parseInt(document.querySelector("#numeroPrimo"));
+
+    if (numero % 2 == 0) {
+        alert("Não é primo");
+    } else {
+        alert("Primo pohaaa")
+    }
 }
