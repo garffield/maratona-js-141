@@ -1,10 +1,4 @@
-/*1. Soma de Dois Números
-Descrição:
-Peça ao usuário dois números e exiba a soma deles.
-Tarefas:
-Crie uma função soma que receba dois números como parâmetros.
-Exiba o resultado no console ou em um alert.
-
+/*
 2. Verificação de Par ou Ímpar
 Descrição:
 Peça ao usuário um número e diga se ele é par ou ímpar.
@@ -114,3 +108,79 @@ Tarefas:
 Use um loop para gerar os números pares.
 Adicione os números a um array e exiba-o no console.
 */
+
+/*1. Soma de Dois Números
+Descrição:
+Peça ao usuário dois números e exiba a soma deles.
+Tarefas:
+Crie uma função soma que receba dois números como parâmetros.
+Exiba o resultado no console ou em um alert.
+*/
+
+// let resultado;
+// let numberOne = parseInt(document.getElementById("numberOne").value);
+// let numberTwo = parseInt(document.getElementById("numberTwo").value);
+
+// function sum (numberOne, numberTwo) {
+//     numberOne = numberOne.value
+//     numberTwo = numberTwo.value
+//     resultado = numberOne + numberTwo;
+//     window.alert(resultado);
+// }
+
+function sum(){
+    let numberOne = parseInt(document.getElementById("numberOne").value);
+    let numberTwo = parseInt(document.getElementById("numberTwo").value);
+    let result = numberOne + numberTwo;
+    alert("Resultado: " + result);
+}
+
+function imparOUpar(){
+    let number = parseInt(document.getElementById("imparOUpar").value);
+    var result = number % 2 == 0 ? "PAR" : "IMPAR"
+    alert("Este numero é: " + result);
+}
+
+function sequenciaFor() {
+    for (var i = 0; i < 11; i++) {
+        console.log(i);
+    }
+}
+
+function sequenciaWhile() {
+    let i = 0;
+    while (i <= 10){
+        console.log(i);
+        i++;
+    }
+}
+
+function tabuada(){
+    let number = document.querySelector("#tabuadaValor").value;
+
+    for (let i = 0; i <= 10; i++) {
+        console.log(number,' x ', i, ' = ', number * i)
+    }
+}
+
+function lerArray() {
+    const myArrayList = [3, 7, 2, 9, 5];
+    let numMaior = 0;
+
+    for (numero of myArrayList){
+        if (numero > numMaior) {
+            numMaior = numero;
+        }
+    }
+    console.log(numMaior)
+}
+
+function inverterPalavra() {
+    let palavra = document.querySelector("#palavraInvertida").value;
+
+    //split()
+     //array.reverse()
+    
+
+    
+}
