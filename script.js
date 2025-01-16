@@ -226,20 +226,31 @@ botaoFatorial.addEventListener("click", () => {
 });
 
 
-const botaoPalavraInvertida = document.querySelector("#botaoPalindromo");
-let palavra = document.querySelector("#palindromo").value;
-const palavraInvertida = palavra.reverse();
+function verificarPalindromo() {
+    let arrayPalindromo = document.querySelector("#palindromo").value;
+    let arrayCortado = arrayPalindromo.split('');
+    const arrayPalindroInvertido = arrayCortado.reverse();
+    
+    if (arrayPalindromo != arrayPalindroInvertido.join('')){
+        document.getElementById("mostrarPalindromo").textContent = `NÃO É PALINDROMO`; 
+    } else {
+        document.getElementById("mostrarPalindromo").textContent = `É PALINDROMO`; 
+    }
 
-botaoPalavraInvertida.addEventListener('click', () => {
-    console.log(palavra)
-    console.log(palavraInvertida)
+}
 
-});
+function gerarNumeroAleatorio(){
+    console.log(gerarNumero(100))
 
+    function gerarNumero(num){
+        return Math.floor(Math.random() * num)
+    }
+}
 
-    // if (palavra != palavraInvertida) {
-    //     alert("Não é palindromo")
-    // } else {
-    //     alert("Palindromo");
-    // }
+function contarVogal(){
+    const inputVogal = document.querySelector("#inputVogal").value
+    vogais = {
+        a = 'a'
 
+    }
+}
