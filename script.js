@@ -193,11 +193,53 @@ function somarArray(){
 }
 
 function verificarPrimo() {
-    let numero = parseInt(document.querySelector("#numeroPrimo"));
-
-    if (numero % 2 == 0) {
-        alert("Não é primo");
-    } else {
-        alert("Primo pohaaa")
+    let numero = parseInt(document.querySelector("#numeroPrimo").value);
+    if (numero <= 1) {
+        document.getElementById("primoResultado").textContent = `Não é primo. É divisível por ${i}`;
     }
-}
+    
+    for (let i = 2; i <= Math.sqrt(numero); i++) {
+        if (numero % i === 0) {
+            document.getElementById("primoResultado").textContent = `Não é primo. É divisível por ${i}`;
+        }
+    }
+
+    document.getElementById("primoResultado").textContent = `É PRIMOOOO`;
+    //consegui fazer nao prof 
+} 
+
+let botaoFatorial = document.getElementById("fatorialBotao");
+let numInput = document.querySelector("#fatorialQuestao"); 
+
+botaoFatorial.addEventListener("click", () => {
+  let num = parseInt(numInput.value); 
+
+  function fatorial(n) {
+    if (n === 0) {
+      return 1;
+    } else {
+      return n * fatorial(n - 1);
+    }
+  }
+  let resultado = fatorial(num);
+  document.getElementById("resultadoFatorial").textContent = `O fatorial de ${num} é: ${resultado}`; 
+});
+
+
+const botaoPalavraInvertida = document.querySelector("#botaoPalindromo");
+let palavra = document.querySelector("#palindromo").value;
+const palavraInvertida = palavra.reverse();
+
+botaoPalavraInvertida.addEventListener('click', () => {
+    console.log(palavra)
+    console.log(palavraInvertida)
+
+});
+
+
+    // if (palavra != palavraInvertida) {
+    //     alert("Não é palindromo")
+    // } else {
+    //     alert("Palindromo");
+    // }
+
