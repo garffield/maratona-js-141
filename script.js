@@ -1,4 +1,12 @@
 /*
+
+/*1. Soma de Dois Números
+Descrição:
+Peça ao usuário dois números e exiba a soma deles.
+Tarefas:
+Crie uma função soma que receba dois números como parâmetros.
+Exiba o resultado no console ou em um alert.
+
 2. Verificação de Par ou Ímpar
 Descrição:
 Peça ao usuário um número e diga se ele é par ou ímpar.
@@ -108,25 +116,6 @@ Tarefas:
 Use um loop para gerar os números pares.
 Adicione os números a um array e exiba-o no console.
 */
-
-/*1. Soma de Dois Números
-Descrição:
-Peça ao usuário dois números e exiba a soma deles.
-Tarefas:
-Crie uma função soma que receba dois números como parâmetros.
-Exiba o resultado no console ou em um alert.
-*/
-
-// let resultado;
-// let numberOne = parseInt(document.getElementById("numberOne").value);
-// let numberTwo = parseInt(document.getElementById("numberTwo").value);
-
-// function sum (numberOne, numberTwo) {
-//     numberOne = numberOne.value
-//     numberTwo = numberTwo.value
-//     resultado = numberOne + numberTwo;
-//     window.alert(resultado);
-// }
 
 function sum(){
     let numberOne = parseInt(document.getElementById("numberOne").value);
@@ -247,10 +236,37 @@ function gerarNumeroAleatorio(){
     }
 }
 
-function contarVogal(){
-    const inputVogal = document.querySelector("#inputVogal").value
-    vogais = {
-        a = 'a'
+function contarVogal() {
+  const inputVogal = document.querySelector("#inputVogal").value;
+  let count = 0;
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
 
+  for (let i = 0; i < inputVogal.length; i++) { 
+    if (vogais.includes(inputVogal[i])) { 
+      count++;
     }
+  }
+
+  document.querySelector("#mostrarVogais").textContent = `Vogais: ${count}`;
+}
+
+function substituirArray(){
+    const meuArray = [4, -3, 2, -1, 0];
+
+    const resultado = meuArray.map(num => num < 0 ? 0 : num);
+    
+    document.querySelector("#mostrarArray").textContent = `${resultado}`;    
+    
+}
+
+function palavraProibida() {
+    const proibidao = ['caralho', 'merda', 'cu', 'pau'];
+    const proibidaoInput = document.querySelector("#proibidao").value;
+    
+    if (proibidao [proibidaoInput]){
+        console.log("DA NAO MANO")
+    } else {
+        console.log("TUDO OK")
+    }
+
 }
