@@ -183,18 +183,24 @@ function somarArray(){
 
 function verificarPrimo() {
     let numero = parseInt(document.querySelector("#numeroPrimo").value);
-    if (numero <= 1) {
-        document.getElementById("primoResultado").textContent = `Não é primo. É divisível por ${i}`;
+    if (numero < 2) {
+        document.getElementById("primoResultado").textContent = `Não é primo.`;
+        return;
     }
     
-    for (let i = 2; i <= Math.sqrt(numero); i++) {
-        if (numero % i === 0) {
-            document.getElementById("primoResultado").textContent = `Não é primo. É divisível por ${i}`;
+    if (numero > 2 && numero % 2 == 0){
+        document.getElementById("primoResultado").textContent = `Não é primo.`;
+        return;
+    }
+    
+    for (let i = 3; i <= Math.sqrt(numero); i =+ 2) {
+        if (numero % i == 0) {
+            document.getElementById("primoResultado").textContent = `Não é primo.`;
+            return;
         }
     }
 
     document.getElementById("primoResultado").textContent = `É PRIMOOOO`;
-    //consegui fazer nao prof 
 } 
 
 let botaoFatorial = document.getElementById("fatorialBotao");
@@ -260,7 +266,7 @@ function substituirArray(){
 }
 
 function palavraProibida() {
-    const proibidao = ['caralho', 'merda', 'cu', 'pau'];
+    const proibidao = [''];
     const proibidaoInput = document.querySelector("#proibidao").value;
     
     if (proibidao [proibidaoInput]){
@@ -269,4 +275,13 @@ function palavraProibida() {
         console.log("TUDO OK")
     }
 
+}
+function numerosPares(){
+    const arrayPares = [];
+    
+    for (let i = 0; i >= 20; i++);
+        // arrayPares.push(i);
+        console.log(i)
+        
+    document.querySelector("#mostrarNumeroPares").textContent = `${arrayPares}`
 }
